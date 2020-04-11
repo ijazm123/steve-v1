@@ -1,0 +1,131 @@
+https://stackoverflow.com/questions/50973048/forking-git-repository-from-github-to-gitlab
+git remote add upstream https://github.com/RWTH-i5-IDSG/steve.git
+git pull upstream master
+git push origin master
+
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');
+CREATE DATABASE gnrgyocppserver CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+GRANT ALL PRIVILEGES ON gnrgyocppserver.* TO 'root'@'localhost' IDENTIFIED BY 'root';
+GRANT SELECT ON mysql.proc TO 'gnrgyocppserver'@'localhost' IDENTIFIED BY 'root';	
+
+default_time_zone="+00:00" in mysqld section of my.cnf
+
+https://github.com/RWTH-i5-IDSG/ocpp-jaxb.git
+mvn install
+mvn install:install-file -Dfile=ocpp-jaxb-0.0.1.jar -DgroupId=com.github.RWTH-i5-IDSG -DartifactId=ocpp-jaxb -Dversion=0.0.1 -Dpackaging=jar
+
+set profile dev in eclipse
+
+
+default_time_zone="+00:00" in mysqld section of my.cnf
+
+
+Browser WebSocket Client:- https://chrome.google.com/webstore/detail/browser-websocket-client/mdmlhchldhfnfnkfmljgeinlffmdgkjo
+Server protocol :- ocpp1.6
+Version stored in table ocpp1.6J
+
+[
+  2,
+  "yUtxCAuRRv26dKRuQ1fy1AYvE0fZTZ2Z",
+  "StatusNotification",
+  {"connectorId":1,"status":"Available","errorCode":"NoError"}
+]
+
+http://localhost:4000/steve/mobile/remote_start
+{"connector":"91*1","identifier":"ABCD"}
+
+[
+  2,
+  "b33c935a-dcab-4b30-a21d-afd65647e8df",
+  "RemoteStartTransaction",
+  {
+    "connectorId": 1,
+    "idTag": "ABCD"
+  }
+]
+
+[
+  3,
+  "b33c935a-dcab-4b30-a21d-afd65647e8df",
+  {
+    "status": "Accepted"
+  }
+]
+
+
+[
+  2,
+  "1234565545453",
+  "StartTransaction",
+  {
+    "connectorId": 1,
+    "idTag": "ABCD"
+  }
+]
+
+[
+  3,
+  "1234565545453",
+  {
+    "transactionId": 2,
+    "idTagInfo": {
+      "status": "Accepted",
+      "expiryDate": "2021-02-01T00:00:00.000Z"
+    }
+  }
+]
+
+[
+  2,
+  "1234565545453",
+  "StopTransaction",
+  {
+    "transactionId": 2,
+      "idTag": "ABCD"
+  }
+]
+[3,"1234565545453",{"idTagInfo":{"status":"Accepted","expiryDate":"2021-02-01T00:00:00.000Z"}}]
+
+
+
+[
+	3,
+	"b0b51a0e-36e5-4bf7-a014-ea0ef14c88fe",
+	{
+                "configurationKey": [{
+				"key": "MaxCurrent",
+				"readonly": false,
+				"value": "27"
+			},
+			{
+				"key": "MaxSiteCurrent",
+				"readonly": false,
+				"value": "32"
+			}
+		]
+	}
+]
+
+
+[
+  2,
+  "c2321da4-031b-4e32-86b4-dd6d765bbe82",
+  "ChangeConfiguration",
+  {
+    "key": "MaxCurrent",
+    "value": "20"
+  }
+]
+
+
+[
+	3,
+	"c2321da4-031b-4e32-86b4-dd6d765bbe82",
+	{
+		"status":"NotSupported"
+	}
+]
+
+
+
+

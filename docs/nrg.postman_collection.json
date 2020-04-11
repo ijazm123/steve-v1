@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "b08ab4bb-c91a-4a9e-aadc-23a03a46733d",
+		"name": "nrg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Remote_Start",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"connector\":\"91*1\",\"identifier\":\"ABCD\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/steve/mobile/remote_start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"steve",
+						"mobile",
+						"remote_start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remote_stop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"transaction\":123,\"connector\":\"91*1\",\"chargingSessionId\":\"session123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/steve/mobile/remote_stop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"steve",
+						"mobile",
+						"remote_stop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/steve/mobile/sites?ignore_portal_configuration=true",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"stationUuids\":[25,34]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/steve/mobile/sites?ignore_portal_configuration=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"steve",
+						"mobile",
+						"sites"
+					],
+					"query": [
+						{
+							"key": "ignore_portal_configuration",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
